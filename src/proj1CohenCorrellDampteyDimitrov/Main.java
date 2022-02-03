@@ -28,68 +28,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 public class Main extends Application{
-    /**
-     * Creates a Menubar for the Application
-     * 1 Menu item: File
-     * has "exit" and "clear" actions
-     * @return      MenuBar
-     * @see        Menu
-    */
-    private MenuBar createMenu(){
-        MenuBar menuBar = new MenuBar();
-        Menu menuFile = new Menu("File");
-        menuBar.getMenus().addAll(menuFile);
-
-        MenuItem clear = new MenuItem("Clear");
-        clear.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-                //stage.setVisible(false);
-            }
-        });
-
-        MenuItem exit = new MenuItem("Exit");
-        exit.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent t) {
-                System.exit(0);
-            }
-        });
-        menuFile.getItems().addAll(clear, new SeparatorMenuItem(), exit);
-        return menuBar;
-    }
-
-    /**
-     * Creates a Button for the Application
-     * Button stuff
-     * button click events
-     * @return      Button
-     * @see        Button
-    */
-    private Button createButton(){
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
- 
-                /**
-                 * Returns an Image object that can then be painted on the screen. 
-                 * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
-                 * argument is a specifier that is relative to the url argument. 
-                 * <p>
-                 * This method always returns immediately, whether or not the 
-                 * image exists. When this applet attempts to draw the image on
-                 * the screen, the data will be loaded. The graphics primitives 
-                 * that draw the image will incrementally paint on the screen. 
-                 *
-                 * @param  event the location of the image, relative to the url argument
-                 * @return      the image at the specified URL
-                 * @see        Image
-                */
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });//btn.setOnAction
-        return btn;
-    }
+    MyMenu myMenu = new MyMenu();
+    MyButtons myButtons = new MyButtons();
 
     /**
      * Creates Two Buttons and adds to "Stage"
@@ -105,11 +45,13 @@ public class Main extends Application{
     */
     @Override
     public void start(Stage primaryStage) {
-        Button button = createButton();
         Scene scene = new Scene(new VBox(), 400, 350);
-        MenuBar menuBar = createMenu();
-        ((VBox) scene.getRoot()).getChildren().addAll(menuBar);
+
+        Button button = myButtons.createButton();
         ((VBox) scene.getRoot()).getChildren().addAll(button);
+
+        MenuBar menuBar = myMenu.createMenu();
+        ((VBox) scene.getRoot()).getChildren().addAll(menuBar);
 
         primaryStage.setTitle("EC, CC, KD, AD, et al.'s Project 1");
         primaryStage.setScene(scene);
