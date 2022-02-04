@@ -10,6 +10,7 @@ package proj1CohenCorrellDampteyDimitrov;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -64,9 +65,9 @@ public class Main extends Application{
      * @return      Button
      * @see        Button
     */
-    private Button createButton(){
+    private Button createButton(String message){
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        btn.setText(message);
         btn.setOnAction(new EventHandler<ActionEvent>() {
  
                 /**
@@ -85,12 +86,23 @@ public class Main extends Application{
                 */
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                System.out.println(message);
             }
         });//btn.setOnAction
         return btn;
     }
-
+	/**
+     * Creates a Button for the Application
+     * Button stuff
+     * button click events
+     * @return      Button
+     * @see        Button
+    */
+	
+    private ToolBar createToolBar(){
+		ToolBar toolBar = new ToolBar();
+        return toolBar;
+    }
     /**
      * Creates Two Buttons and adds to "Stage"
      * Shows stage in window and handles button "click" events
@@ -110,10 +122,20 @@ public class Main extends Application{
         MenuBar menuBar = createMenu();
         ((VBox) scene.getRoot()).getChildren().addAll(menuBar);
 
+		ToolBar toolBar = createToolBar();
+        Button hello = createButton("Hello");
+		hello.setStyle("-fx-background-color: #90EE90; -fx-border-color: #000000;");
+		Button goodbye = createButton("Goodbye");
+		goodbye.setStyle("-fx-background-color: #FFC0CB; -fx-border-color: #000000;");
+		toolBar.getItems().add(hello);
+		toolBar.getItems().add(goodbye);
+        ((VBox) scene.getRoot()).getChildren().addAll(toolBar);
 
-        Button button = createButton();
-        ((VBox) scene.getRoot()).getChildren().addAll(button);
-
+		TextField textField = new TextField("Sample text");
+		textField.setPrefHeight(290);
+		textField.setAlignment(Pos.TOP_LEFT);
+        ((VBox) scene.getRoot()).getChildren().addAll(textField);
+			
         primaryStage.setTitle("EC, CC, KD, AD, et al.'s Project 1");
         primaryStage.setScene(scene);
         primaryStage.show();
