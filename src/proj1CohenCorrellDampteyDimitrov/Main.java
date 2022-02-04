@@ -124,9 +124,9 @@ public class Main extends Application{
 
 		ToolBar toolBar = createToolBar();
         Button hello = createButton("Hello");
-		hello.setStyle("-fx-background-color: #90EE90; -fx-border-color: #000000;");
+		hello.setStyle("-fx-background-color: #90EE90; -fx-border-radius: .25em; -fx-background-radius: .25em; -fx-border-color: #000000;");
 		Button goodbye = createButton("Goodbye");
-		goodbye.setStyle("-fx-background-color: #FFC0CB; -fx-border-color: #000000;");
+		goodbye.setStyle("-fx-background-color: #FFC0CB; -fx-border-radius: .25em; -fx-background-radius: .25em;  -fx-border-color: #000000;");
 		toolBar.getItems().add(hello);
 		toolBar.getItems().add(goodbye);
         ((VBox) scene.getRoot()).getChildren().addAll(toolBar);
