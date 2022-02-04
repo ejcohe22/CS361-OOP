@@ -27,6 +27,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import java.util.Optional;
 
 public class Main extends Application{
     /**
@@ -68,27 +69,6 @@ public class Main extends Application{
     private Button createButton(String message){
         Button btn = new Button();
         btn.setText(message);
-        btn.setOnAction(new EventHandler<ActionEvent>() {
- 
-                /**
-                 * Returns an Image object that can then be painted on the screen. 
-                 * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
-                 * argument is a specifier that is relative to the url argument. 
-                 * <p>
-                 * This method always returns immediately, whether or not the 
-                 * image exists. When this applet attempts to draw the image on
-                 * the screen, the data will be loaded. The graphics primitives 
-                 * that draw the image will incrementally paint on the screen. 
-                 *
-                 * @param  event the location of the image, relative to the url argument
-                 * @return      the image at the specified URL
-                 * @see        Image
-                */
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println(message);
-            }
-        });//btn.setOnAction
         return btn;
     }
 	/**
@@ -126,6 +106,33 @@ public class Main extends Application{
         Button hello = createButton("Hello");
 		hello.setStyle("-fx-background-color: #90EE90; -fx-border-radius: .25em; -fx-background-radius: .25em; -fx-border-color: #000000;");
 		Button goodbye = createButton("Goodbye");
+		
+//		goodbye.setOnAction(new EventHandler<ActionEvent>() {
+//			 
+//            /**
+//             * Returns an Image object that can then be painted on the screen. 
+//             * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
+//             * argument is a specifier that is relative to the url argument. 
+//             * <p>
+//             * This method always returns immediately, whether or not the 
+//             * image exists. When this applet attempts to draw the image on
+//             * the screen, the data will be loaded. The graphics primitives 
+//             * that draw the image will incrementally paint on the screen. 
+//             *
+//             * @param  event the location of the image, relative to the url argument
+//             * @return      the image at the specified URL
+//             * @see        Image
+//            */
+//        @Override
+//        public void handle(ActionEvent event) {
+//        	
+//            //System.out.println(message);
+//        	
+//        	textField.appendText("Goodbye");
+//        	
+//        }
+//    });//btn.setOnAction
+		
 		goodbye.setStyle("-fx-background-color: #FFC0CB; -fx-border-radius: .25em; -fx-background-radius: .25em;  -fx-border-color: #000000;");
 		toolBar.getItems().add(hello);
 		toolBar.getItems().add(goodbye);
@@ -135,6 +142,64 @@ public class Main extends Application{
 		textField.setPrefHeight(290);
 		textField.setAlignment(Pos.TOP_LEFT);
         ((VBox) scene.getRoot()).getChildren().addAll(textField);
+        
+        goodbye.setOnAction(new EventHandler<ActionEvent>() {
+			 
+            /**
+             * Returns an Image object that can then be painted on the screen. 
+             * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
+             * argument is a specifier that is relative to the url argument. 
+             * <p>
+             * This method always returns immediately, whether or not the 
+             * image exists. When this applet attempts to draw the image on
+             * the screen, the data will be loaded. The graphics primitives 
+             * that draw the image will incrementally paint on the screen. 
+             *
+             * @param  event the location of the image, relative to the url argument
+             * @return      the image at the specified URL
+             * @see        Image
+            */
+        @Override
+        public void handle(ActionEvent event) {
+        	
+            //System.out.println(message);
+        	
+        	textField.appendText("Goodbye");
+        	
+        }
+    });//goodbye.setOnAction
+        
+        hello.setOnAction(new EventHandler<ActionEvent>() {
+			 
+            /**
+             * Returns an Image object that can then be painted on the screen. 
+             * The url argument must specify an absolute <a href="#{@link}">{@link URL}</a>. The name
+             * argument is a specifier that is relative to the url argument. 
+             * <p>
+             * This method always returns immediately, whether or not the 
+             * image exists. When this applet attempts to draw the image on
+             * the screen, the data will be loaded. The graphics primitives 
+             * that draw the image will incrementally paint on the screen. 
+             *
+             * @param  event the location of the image, relative to the url argument
+             * @return      the image at the specified URL
+             * @see        Image
+            */
+        @Override
+        public void handle(ActionEvent event) {
+        	
+            //System.out.println(message);
+        	
+        	TextInputDialog dialog = new TextInputDialog();
+        	dialog.setTitle("Give me a number");
+        	dialog.setHeaderText("Give me an integer from 0 to 255:");
+        	
+        	Optional<String> result = dialog.showAndWait();
+        	
+        	result.ifPresent(number -> {hello.setText(number);});
+        	
+        }
+    });//hello.setOnAction
 			
         primaryStage.setTitle("EC, CC, KD, AD, et al.'s Project 1");
         primaryStage.setScene(scene);
