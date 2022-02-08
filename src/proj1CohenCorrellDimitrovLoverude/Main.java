@@ -28,7 +28,7 @@ public class Main extends Application{
      * The main entry point for all JavaFX applications.
      * Called on the JavaFX Application Thread.
      *
-     * @author Erik Cohen, Cassidy Correll, Anton Dimitrov
+     * @author Erik Cohen, Cassidy Correll, Anton Dimitrov, Jasper Loverude
      * @param  primaryStage  Main window used by Application
      * @return     
      * @see        Application
