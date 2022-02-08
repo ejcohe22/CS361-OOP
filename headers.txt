@@ -1,0 +1,20 @@
+    /**
+     * Creates a MenuBar
+     *
+     * @author Erik Cohen, Cassidy Correll, Anton Dimitrov, Jasper Loverude
+     * @return     a pair of objects: a "MenuBar", and a dictionary of "MenuItem"s
+    */
+    public Pair<MenuBar Hashtable<String, MenuItem>> myMenuBar() {
+
+    }
+
+    /**
+     * Creates a ToolBar
+     *
+     * @author Erik Cohen, Cassidy Correll, Anton Dimitrov, Jasper Loverude
+     * @return     a pair of objects: a "ToolBar", and a dictionary of 
+     *  "Button"s stored in the toolbar
+    */
+    public Pair<ToolBar Hashtable<String, Button>> myToolBar() {
+
+    }
