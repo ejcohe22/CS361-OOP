@@ -28,6 +28,9 @@ MacFiles
 
 VSCode IDE files
 .vscode/
+.settings
+.project
+.classpath
 
 javafx-sdk-17.0.2/
 

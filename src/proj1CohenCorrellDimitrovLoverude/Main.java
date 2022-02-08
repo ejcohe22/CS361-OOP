@@ -5,7 +5,7 @@
 * Project 1
 * Date: February 9
 */
-package proj1CohenCorrellDampteyDimitrov;
+package proj1CohenCorrellDimitrovLoverude;
  
 import javafx.application.Application;
 import javafx.event.ActionEvent;
