@@ -3,7 +3,7 @@
 * Names: Erik Cohen, Cassidy Correll, Anton Dimitrov, Jasper Loverude
 * Class: CS 361
 * Project 1
-* Date: February 9
+* Date: February 9, 2022
 */
 package proj1CohenCorrellDimitrovLoverude;
 
