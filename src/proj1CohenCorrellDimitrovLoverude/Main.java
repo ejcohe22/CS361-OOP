@@ -92,7 +92,7 @@ public class Main extends Application{
      *
      * @author Erik Cohen, Cassidy Correll, Anton Dimitrov, Jasper Loverude
      * @param textField a texfield object to be cleared
-     * @param 
+     * @param hello a button to be reset
      * @return     a "MenuBar" object
     */
     public MenuBar createMenuBar(TextField textField, Button hello) {
