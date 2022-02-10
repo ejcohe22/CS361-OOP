@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78057b9d-b406-4f1d-bc2b-a47fc43e3537" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24t1xCtAnf1GTtT33PXP8MSNuCZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="proj1CohenCorrellDimitrovLoverude.Main" />
+      <module name="CS361-OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proj1CohenCorrellDimitrovLoverude.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78057b9d-b406-4f1d-bc2b-a47fc43e3537" name="Default Changelist" comment="" />
+      <created>1644435318908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644435318908</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="87" y="47" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644437620924">
+      <screen x="0" y="22" width="1245" height="778" />
+    </state>
+    <state x="87" y="47" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1245.778@0.22.1245.778" timestamp="1644437620924" />
+    <state x="396" y="139" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1644453719951">
+      <screen x="0" y="22" width="1245" height="778" />
+    </state>
+    <state x="396" y="139" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.22.1245.778@0.22.1245.778" timestamp="1644453719951" />
+    <state width="1204" height="167" key="GridCell.Tab.0.bottom" timestamp="1644453721130">
+      <screen x="0" y="22" width="1245" height="778" />
+    </state>
+    <state width="1204" height="167" key="GridCell.Tab.0.bottom/0.22.1245.778@0.22.1245.778" timestamp="1644453721130" />
+    <state width="1204" height="167" key="GridCell.Tab.0.center" timestamp="1644453721128">
+      <screen x="0" y="22" width="1245" height="778" />
+    </state>
+    <state width="1204" height="167" key="GridCell.Tab.0.center/0.22.1245.778@0.22.1245.778" timestamp="1644453721128" />
+    <state width="1204" height="167" key="GridCell.Tab.0.left" timestamp="1644453721126">
+      <screen x="0" y="22" width="1245" height="778" />
+    </state>
+    <state width="1204" height="167" key="GridCell.Tab.0.left/0.22.1245.778@0.22.1245.778" timestamp="1644453721126" />
+    <state width="1204" height="167" key="GridCell.Tab.0.right" timestamp="1644453721129">
+      <screen x="0" y="22" width="1245" height="778" />
+    </state>
+    <state width="1204" height="167" key="GridCell.Tab.0.right/0.22.1245.778@0.22.1245.778" timestamp="1644453721129" />
+    <state x="111" y="22" key="SettingsEditor" timestamp="1644437480412">
+      <screen x="0" y="22" width="1245" height="778" />
+    </state>
+    <state x="111" y="22" key="SettingsEditor/0.22.1245.778@0.22.1245.778" timestamp="1644437480412" />
+  </component>
+</project>
