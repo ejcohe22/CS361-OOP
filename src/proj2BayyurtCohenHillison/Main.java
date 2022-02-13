@@ -9,18 +9,19 @@
 package proj2BayyurtCohenHillison;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import java.util.Optional;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 
-/** Creates the Project2 GUI
+/**
+ * Creates the Project2 GUI
  * @author Izge Bayyurt
  * @author Erik Cohen
  * @author Nico Hillison
@@ -111,6 +112,7 @@ public class Main extends Application{
 
     /**
      * Creates a window with interactable buttons
+     * 
      * @param  args Command line arguments used in Application "launch" method
      * @return     an interactable window
      * @see        start
