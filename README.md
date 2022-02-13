@@ -1,11 +1,10 @@
 # CS361-OOP
 Code from CS361 Object Oriented Programming Spring 2022
 
+---
+# Project 1: Learning to Use JavaFX
 Erik Cohen, Cassidy Correll, Anton Dimitrov, Jasper Loverude
 CS361: Object-Oriented Programming
-
- 
-# Project 1: Learning to Use JavaFX
 
 ## Design Overview
  
@@ -26,3 +25,5 @@ An aspect of our code that is slightly inelegant is that the “createMenuBar”
 ## Division of Labor
  
 We met in Davis to work on the project with “Pair Programming” in mind. We worked together each taking turns writing code on our personal machines (and debugging the javaFX install!). The code from our project is stored on Github. 
+
+---
