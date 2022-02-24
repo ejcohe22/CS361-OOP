@@ -53,3 +53,34 @@ An inelegant part of our solution is the dialog box that pops up when the “hel
 
 We got together in Davis and worked on the SceneBuilder to build the new project. The SceneBuilder took care of creation of the code, while we just had to adjust the hierarchy of the elements manually.
 
+---
+
+# Project 3: Adding new menus, menu items, and tabs
+
+## Design Overview
+
+We started this project with Wen’s Project 2. In Scene Builder, we added the 12 required menu items and moved the “TextArea” into a “TabPane”. Each tab of the “TabPane” represents a file that is being edited. We added the option to create a new tab, open an existing file, save a file, save a file with a new name, and close a file. We have private helper methods that allow the user to read and write to files in their directory. In order to know if the file in a tab is saved or not we kept track of the filePath of the current tab in a “filePaths” map (stored as a private variable in Controller.java). The filePath is stored when a file is opened and when the action for “save as…” is called. When the save action is started, we check if the filePath exists/ is valid, then overwrite the file. If it is not, we call the saveFileAs method instead. Likewise, when we close a file, we can first open the file at the specified location and check that the content is equal to the current content of the “TextArea” if it is not the same a dialog appears asking the user to save.
+
+The other major part of this project was implementing the undo/redo functionality in a “TextHistory” class. The “TextHistory” is a stack of strings that hold the content of the TextArea at different time points. The “saveState'' function of our controller is called every time a key is released in the “TabPane” object. This function pushes the current “TextArea” text onto the matching “TextHistory” undo stack. When the user wishes to undo, the “TextHistory” class moves the current state to a redo stack and then retrieves the last state from the “TextHistory” undo stack. Redo works the same way but in reverse.
+
+## Elegant Design Features
+
+One example of an elegant design feature is the use of java’s “Map” to store the file path and TextHistory of each tab. This allows the user to manage which file is open in each tab and also make independent undo/redo actions for each open tab. By keeping the TextHistory information independent of JavaFX dependencies, we have a file that could be used in other java projects. In addition, we were able to create and test this file before including it in the larger spiderweb that is our Controller class.
+
+Another elegant decision we made was to separate the start method from all the other “controller” methods by creating a new class. This makes it a lot easier to understand what the code does to whoever is reading it and it makes it a lot more scalable too.
+
+## Class Structure
+
+We have two classes that handle purely JavaFX actions. The Controller class is the one in charge of telling JavaFX what elements exist and what to do when the user interacts with them, most of the functionality of the program resides in this class. The Main class is the one in charge of starting the program. We also have a TextHistory class that holds two stacks representing undo and redo states. This encapsulates the technical aspects of the undo and redo functionality.
+We also have a CSS file for managing the style of the buttons and a Main.fxml file created with SceneBuilder that sets up the main window of our program.
+
+## Shortcomings
+
+At first, we wrote our entire program inside the main.java file, which made it very hard for anyone to understand what was going on. When we realized this we decided to break up the program into smaller files that would do specific things. We are unsure of how to break up our fxml files/objects so that they are separate, but able to communicate with each other. For example, we wanted to put all FIle operations in a separate controller class ( open…, save, save as…, close). However, these methods would not have access to the textArea that holds the content to be saved. We found some online discussion about using a “Model View Controller” design pattern but it was confusing and was too time-consuming for any of us to implement properly.
+
+Although we were not able to do a lot of testing of our system, we are confident that we have handled major bugs+errors/ NullPointerExceptions.
+ 
+## Division of Labor
+
+We met in Davis to go over the goals of the project and then each one of us worked on the tasks that were best suited for our skills. Dylan worked on implementing most of the file menu buttons, Erik implemented most of the edit menu (especially the undo and redo buttons), which took some extra effort. Wen was the one in charge of cleaning up the code and making it look elegant, she also helped to break out the methods and classes in different files.
+
